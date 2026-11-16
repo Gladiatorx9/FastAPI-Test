@@ -60,7 +60,7 @@ def network():
     return get_network()
 
 
-# System information of conencted device 
+# System information of connected device
 @app.get("/system")
 def system():
     return get_system()
