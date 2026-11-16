@@ -18,49 +18,49 @@ app = FastAPI(
 )
 
 
-# Health check
+# Health check for the reachability 
 @app.get("/")
 def home():
     return {"message": "System Monitoring API is running"}
 
 
-# All metrics
+# All metrics covering virtual memory , disk space etc 
 @app.get("/metrics")
 def metrics():
     return get_system_details()
 
 
-# CPU metrics
+# CPU metrics of the device
 @app.get("/cpu")
 def cpu():
     return get_cpu()
 
 
-# Memory metrics
+# Memory metrics of device 
 @app.get("/memory")
 def memory():
     return get_memory()
 
 
-# Disk metrics
+# Disk metrics of device 
 @app.get("/disk")
 def disk():
     return get_disk()
 
 
-# Battery metrics
+# Battery metrics of device 
 @app.get("/battery")
 def battery():
     return get_battery()
 
 
-# Network metrics
+# Network metrics of device 
 @app.get("/network")
 def network():
     return get_network()
 
 
-# System information
+# System information of connected device
 @app.get("/system")
 def system():
     return get_system()
